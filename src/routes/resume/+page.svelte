@@ -1,0 +1,228 @@
+<main>
+	<h1>Resume</h1>
+	<section>
+		<section class="contact">
+			<h2>Noel Fowlie</h2>
+			<p>(704) 699-9544</p>
+			<p>noel@fowlie.dev</p>
+		</section>
+		<section class="skills">
+			<h3>Skills</h3>
+			<p>
+				JavaScript, HTML, CSS, VueJS, ReactJS, Svelte, Next, Nuxt, NodeJS, NGINX, Git, Jira, RedHat,
+				pm2, Oracle, DNS, Linux, MacOS, Windows, MUI X, Soap
+			</p>
+		</section>
+		<section class="experience">
+			<h3>Experience</h3>
+			<h4>Digichief, Los Angeles, CA – Front End Developer (Freelance)</h4>
+			<h5>April 2024 – Current</h5>
+			<ul>
+				<li>
+					Software development for digital signage and interactive displays that allow for customer
+					editable designs.
+				</li>
+				<li>Projects have included:</li>
+				<li>Slideshows with data from feeds</li>
+				<li>Projects utilize HTML, CSS, and JavaScript</li>
+			</ul>
+			<h4>Banc of California, Los Angeles, CA – Front End Developer</h4>
+			<h5>November 2022 – Current</h5>
+			<ul>
+				<li>
+					Developing front end applications for internal banking use and managing servers for those
+					applications as well as modernizing existing Java applications.
+				</li>
+				<li>Projects include:</li>
+				<ul>
+					<li>
+						MOD Approval
+						<ul>
+							<li>A large scale application built for tracking and reporting pipeline activity.</li>
+							<li>
+								Allows for specified users and user groups to approve transactions and sends
+								automatic email notifications based on approval activity.
+							</li>
+							<li>
+								Allows for creating and managing approval templates, email groups, email events, and
+								user approvals.
+							</li>
+							<li>
+								Allows for searching of pending and approved approval items. Showcasing voting
+								histories and relavent documents to each approval.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Wire Transfer Search
+						<ul>
+							<li>
+								A web application that allows users to search for, filter, and export wire transfer
+								data.
+							</li>
+						</ul>
+					</li>
+					<li>
+						Enabling Single Sign On with LDAP utilizing nextauth and Oracle to grant user
+						permissions
+						<ul>
+							<li>
+								User permissions granted access to specific internal tools as well as specific
+								features of those tools based on permission level
+							</li>
+						</ul>
+					</li>
+					<li>Designing intuitive web applications for users to GET, PUT, POST, and DELETE data</li>
+				</ul>
+				<li>Responsibilities include:</li>
+				<ul>
+					<li>
+						Designing and implementing modern web applications that will replace aging
+						infrastructure
+					</li>
+					<li>
+						Writing Build and Deploy scripts in bash that pulls from the latest commit of our
+						repositories
+					</li>
+					<li>Setting up and managing an NGINX web server running on RedHat</li>
+				</ul>
+				<li>
+					Projects have utilized HTML, CSS, JavaScript, ReactJS, NextJS, NGINX, MUI X, soap, pm2,
+					RedHat, Oracle, and bash
+				</li>
+			</ul>
+			<h4>Extra, Los Angeles, CA - Senior Front End Developer</h4>
+			<h5>November 2021 - September 2022</h5>
+			<ul>
+				<li>
+					Worked on many aspects of the business from Front End Development to Dev Ops to
+					Organization structure changes
+				</li>
+				<li>Projects have included:</li>
+				<ul>
+					<li>Landing and Influencer Pages</li>
+					<ul>
+						<li>Built out Landing and Influencer Pages in Webflow</li>
+						<li>
+							Lead the transition of our Landing and Influencer Pages from Webflow into SanityIO
+						</li>
+					</ul>
+					<li>Giveaways</li>
+					<ul>
+						<li>
+							Made self building route giveaway pages that pull data from SanityIO based on the URL
+							in the browser
+						</li>
+					</ul>
+					<li>Sign-up Flow Redesign</li>
+					<ul>
+						<li>Worked on the sign-up flow redesign for our company</li>
+						<li>Built pixel perfect designs</li>
+						<li>Built an Address verification step using Smarty</li>
+						<li>Hooked up the new sign-up flow to existing and new api endpoints</li>
+					</ul>
+					<li>Build Process Optimization</li>
+					<ul>
+						<li>
+							Decreased our build and deploy time for our site from 40 minutes to 15 minutes by
+							debugging issues within our build process
+						</li>
+					</ul>
+					<li>Documentation Revamp</li>
+					<ul>
+						<li>Led a department wide effort to create searchable up to date documentation</li>
+					</ul>
+					<li>Onboarding Revamp</li>
+					<ul>
+						<li>Led a department wide effort to optimize our onboarding process</li>
+						<li>
+							Created Templatized Onboarding Documents that are used to create individualized
+							Onboarding Experiences for new hires
+						</li>
+					</ul>
+				</ul>
+				<li>
+					Projects have utilized HTML, CSS, JavaScript, VueJS, React, React Native, Webflow,
+					SanitIO, Google Tag Manager, Google Optimize, and Google Analytics
+				</li>
+				<li>Google Tag Manager (GTM)</li>
+				<ul>
+					<li>Created custom tags and events in GTM</li>
+				</ul>
+				<li>Google Optimize</li>
+				<ul>
+					<li>
+						Ran multiple A/B tests across our site to determine which design direction to go towards
+					</li>
+				</ul>
+				<li>Google Analytics</li>
+			</ul>
+			<h4>Mood Media, Fort Mill, SC - Front End Developer</h4>
+			<h5>January 2017 - July 2021</h5>
+			<ul>
+				<li>Software development for digital signage and interactive displays.</li>
+				<li>Projects have included:</li>
+				<ul>
+					<li>Restaurant Menus</li>
+					<li>Building Directories</li>
+					<li>Event Calendars</li>
+					<li>Slideshows with data from feeds</li>
+					<ul>
+						<li>Including OAuth enabled data</li>
+						<ul>
+							<li>Using Twitter APIs to pull down user search queries for display</li>
+						</ul>
+					</ul>
+					<li>Jukebox style music voting application</li>
+					<li>In Store and Trade Show Kiosks</li>
+				</ul>
+				<li>Projects have utilized HTML, CSS, JavaScript, and VueJS</li>
+				<li>Writing NodeJS applications to pull data from feed sites</li>
+				<ul>
+					<li>
+						Pulling information such as weather, event data, stock pricing, etc for display on
+						digital signage.
+					</li>
+				</ul>
+				<li>Interactive touch screen web applications optimized for low powered devices.</li>
+			</ul>
+			<h4>Wells Fargo, Charlotte, NC - Jr. Front End Developer</h4>
+			<h5>June 2015 - December 2016</h5>
+			<ul>
+				<li>Developed the front end for internal inventory management software.</li>
+				<li>Contributed to various other internal tools.</li>
+				<li>Utilized Angular 1.x, Bootstrap, HTML, CSS, and JavaScript</li>
+			</ul>
+		</section>
+		<section class="education">
+			<h3>Education</h3>
+			<h4>
+				University of North Carolina Charlotte, Charlotte — Management And Information Systems
+			</h4>
+			<h5>August 2011 - May 2015</h5>
+		</section>
+		<section class="hobbies">
+			<h3>Hobbies and Interests</h3>
+			<h5>
+				Web development, game development, raspberry pi tinkering, reading, video games, anime,
+				longboarding.
+			</h5>
+		</section>
+	</section>
+</main>
+
+<style>
+	main {
+		max-width: 1280px;
+		width: 80vw;
+		margin: 0 auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	section {
+		padding: 1rem 0rem;
+	}
+</style>
