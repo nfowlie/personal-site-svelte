@@ -5,48 +5,48 @@
 			"description": "An auto expanding grid with identically sized squares that produces a tile explosion effect on click.",
 			"siteLink": "https://nfowlie.github.io/tiles/",
 			"repoLink": "https://github.com/nfowlie/tiles",
-			"image": "/src/lib/assets/images/tiles_banner.png"
+			"image": "/images/tiles_banner.png"
 		},
 		{
 			"name": "Tiles 3D",
 			"description": "An auto expanding grid with identically sized cubes that raise up when hovered.",
 			"siteLink": "https://nfowlie.github.io/tiles3d",
 			"repoLink": "https://github.com/nfowlie/tiles3d",
-			"image": "/src/lib/assets/images/tiles3d_banner.png"
+			"image": "/images/tiles3d_banner.png"
 		},
 		{
 			"name": "Personal Site",
 			"description": "My personal resume site that showcases projects I have worked on and my skill set.",
 			"siteLink": "/",
 			"repoLink": "https://github.com/nfowlie/personal-site",
-			"image": "/src/lib/assets/images/personal_site.png"
+			"image": "/images/personal_site.png"
 		},
 		{
 			"name": "FlipperZero Animation Tool",
 			"description": "An application for creating custom animations for the FlipperZero.",
 			"siteLink": "https://github.com/nfowlie/flipperzero-animation-tool/releases",
 			"repoLink": "https://github.com/nfowlie/flipperzero-animation-tool",
-			"image": "/src/lib/assets/images/flipperzero_animation_tool.png"
+			"image": "/images/flipperzero_animation_tool.png"
 		},
 		{
 			"name": "Pikmin Party",
 			"description": "A web application that plays a Pikmin noise on a random interval.  It adds a small delight to get togethers.",
 			"siteLink": "https://github.com/nfowlie/pikmin-party",
 			"repoLink": "https://github.com/nfowlie/pikmin-party",
-			"image": "/src/lib/assets/images/pikmin_party.png"
+			"image": "/images/pikmin_party.png"
 		},
 		{
 			"name": "Trinity Force Network General Gaming Lootbox",
 			"description": "A site made to celebrate the 100th episode of TFN's General Gaming podcast. On the site you can unlock audio clips of the various news songs throughout its runtime.",
 			"siteLink": "https://nfowlie.github.io/TFNGG/",
 			"repoLink": "https://github.com/nfowlie/TFNGG",
-			"image": "/src/lib/assets/images/tfngg_news.png"
+			"image": "/images/tfngg_news.png"
 		},
 		{
 			"name": "BUNNYWARNING's Personal Site",
 			"description": "Personal site for BUNNYWARNING.  Hosted on Neocities, this site was a complete re-write of his existing personal site to increase performance and allow for responsive design.",
 			"siteLink": "https://bunnywarning.com",
-			"image": "/src/lib/assets/images/bunnywarning.png"
+			"image": "/images/bunnywarning.png"
 		}
 	]
 }

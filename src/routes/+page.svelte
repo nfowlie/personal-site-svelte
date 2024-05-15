@@ -1,9 +1,9 @@
 <script>
-	import ProfileImage from '$lib/assets/images/profile.jpg';
+	// import ProfileImage from '$lib/assets/images/profile.jpg';
 </script>
 
 <header>
-	<img src={ProfileImage} alt="Picture of Noel" />
+	<img src="/images/profile.jpg" alt="Picture of Noel" />
 	<h1>Noel Fowlie</h1>
 	<h3>Web Developer</h3>
 </header>
