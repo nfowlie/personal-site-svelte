@@ -2,13 +2,24 @@
 	export let project;
 </script>
 
-<button class="project" on:click={() => (window.location.href = project.siteLink)}>
+<div
+	class="project"
+	on:click={() => (window.location.href = project.siteLink)}
+	role="button"
+	tabindex="0"
+	on:keydown={(event) => {
+		if (event instanceof KeyboardEvent && event.key !== 'Enter' && event.key !== ' ') {
+			return;
+		}
+		window.location.href = project.siteLink;
+	}}
+>
 	<div class="project-title">{project.name}</div>
 	<div class="project-description">
 		{project.description}
 		<a href={project.repoLink}>Repo Link</a>
 	</div>
-</button>
+</div>
 
 <style>
 	.project {

@@ -29,6 +29,10 @@
 				--gray5: hsl(192, 32%, 12%);
 				--gray6: hsl(190, 30%, 4%);
 				--bg-solar: #fff;
+				--project-gradient-0: hsla(200, 20%, 9%, 1);
+				--project-gradient-1: hsla(200, 20%, 9%, 50%);
+				--project-gradient-2: hsla(200, 20%, 9%, 10%);
+				--project-gradient-3: hsla(200, 20%, 9%, 0%);
 			}
 		</style>
 	{:else}
