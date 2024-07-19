@@ -1,4 +1,5 @@
 <script>
+	import Status from '$lib/components/Status.svelte';
 	import { themeRender } from '../stores/theme.svelte';
 
 	const theme = themeRender();
@@ -33,6 +34,7 @@
 				--project-gradient-1: hsla(200, 20%, 9%, 50%);
 				--project-gradient-2: hsla(200, 20%, 9%, 10%);
 				--project-gradient-3: hsla(200, 20%, 9%, 0%);
+				--terminal-detail: white;
 			}
 		</style>
 	{:else}
@@ -53,6 +55,7 @@
 				--project-gradient-2: hsla(200, 20%, 9%, 10%);
 				--project-gradient-3: hsla(200, 20%, 9%, 0%);
 				--bg-solar: var(--yellow);
+				--terminal-title: hsl(175, 35%, 73%);
 			}
 		</style>
 	{/if}
@@ -66,6 +69,7 @@
 				--border-color: var(--blue);
 
 				--project-opacity: 0.85;
+				--terminal-title: hsl(184, 31%, 40%);
 			}
 			#light:before {
 				background: black;
@@ -83,6 +87,14 @@
 			}
 			#light:before {
 				background: white;
+			}
+		</style>
+	{/if}
+	{#if theme.light && theme.solar}
+		<style>
+			:root {
+				--terminal-title: hsl(192, 32%, 12%) !important;
+				--terminal-detail: black;
 			}
 		</style>
 	{/if}
@@ -109,6 +121,7 @@
 			</ul>
 		</li>
 	</ul>
+	<Status></Status>
 </nav>
 <slot />
 
