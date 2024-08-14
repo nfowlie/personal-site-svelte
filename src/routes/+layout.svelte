@@ -1,4 +1,6 @@
 <script>
+	import Start from '$lib/components/Start.svelte';
+	import Desktops from '$lib/components/Desktops.svelte';
 	import Status from '$lib/components/Status.svelte';
 	import { themeRender } from '../stores/theme.svelte';
 
@@ -101,14 +103,19 @@
 </svelte:head>
 
 <nav class="navbar">
+	<Start></Start>
+	<Desktops></Desktops>
 	<Status></Status>
 </nav>
 <slot />
 
 <style>
 	.navbar {
-		display: flex;
-		justify-content: end;
-		margin-block: 0.35rem;
+		position: relative;
+		display: grid;
+		margin-block: 0.5rem;
+		margin-inline: 1rem;
+		grid-template-columns: repeat(3, max-content);
+		justify-content: space-between;
 	}
 </style>

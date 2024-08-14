@@ -4,6 +4,9 @@
 
 <div id="status">
 	<button>
+		<LucideIcon name="Lightbulb" />
+	</button>
+	<button>
 		<LucideIcon name="Sun" />
 	</button>
 	<button>
