@@ -10,10 +10,5 @@
 
 <style>
 	#start {
-		padding-inline: 0.75rem;
-		padding-block: 0.35rem;
-		background-color: var(--gray4);
-		display: inline-block;
-		border-radius: 10px;
 	}
 </style>

@@ -29,11 +29,6 @@
 
 <style>
 	#desktops {
-		padding-inline: 0.75rem;
-		padding-block: 0.35rem;
-		background-color: var(--gray4);
-		display: inline-block;
-		border-radius: 10px;
 	}
 	button {
 		font-weight: 700;
@@ -41,9 +36,13 @@
 		width: 2rem;
 		border-radius: 50%;
 		transition: 250ms;
+		background-color: hsla(0, 0%, 62%, 0.58);
+		opacity: 0.5;
+		color: var(--gray0);
 	}
 	button.current {
 		width: 4rem;
 		border-radius: 25px;
+		opacity: 1;
 	}
 </style>
