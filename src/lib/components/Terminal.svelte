@@ -3,6 +3,11 @@
 </script>
 
 <div id="terminal">
+	<div class="commandContainer">
+		<span class="username">noel</span><span class="system">@fowlie</span>
+		<span class="commandTilde">~</span><span class="system">&gt;</span>
+		<span class="command">profilefetch</span>
+	</div>
 	<!-- svelte-ignore a11y_img_redundant_alt -->
 	<img src={profileImage} alt="Picture of Noel" />
 	<div id="infoBlock">
@@ -56,15 +61,41 @@
 
 <style>
 	#terminal {
-		display: flex;
+		--terminal-command: #57c2d8;
+		--terminal-username: #abd376;
+		--terminal-system: #cbccc6;
+		display: grid;
 		column-gap: 2rem;
+		row-gap: 1rem;
+		border-radius: 10px;
+		background-color: rgba(16, 16, 16, 0.699);
+		padding: 1rem;
+		grid-template-areas:
+			'command command'
+			'picture infoBlock';
+	}
+	.commandContainer {
+		grid-area: command;
+
+		.username,
+		.commandTilde {
+			color: var(--terminal-username);
+		}
+		.system {
+			color: var(--terminal-system);
+		}
+		.command {
+			color: var(--terminal-command);
+		}
 	}
 	img {
+		grid-area: picture;
 		border-radius: 50%;
 		height: 300px;
 		width: 300px;
 	}
 	#infoBlock {
+		grid-area: infoBlock;
 	}
 	#infoTitle {
 		border-block-end: 2px dashed black;

@@ -9,8 +9,22 @@
 
 <style>
 	main {
-		max-width: 1280px;
-		width: 80vw;
 		margin: 0 auto;
+		display: grid;
+		grid-template-areas: 'terminal';
+		margin-inline: 1rem;
+	}
+	:global(main > *) {
+		border: 4px solid rgb(101, 156, 155);
+		transition: 400ms;
+		opacity: 0.85;
+	}
+	:global(main > *:hover) {
+		border: 4px solid rgb(65, 184, 164);
+		opacity: 1;
+	}
+	:global(#terminal) {
+		grid-area: terminal;
+		width: 610px;
 	}
 </style>
