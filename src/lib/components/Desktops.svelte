@@ -16,21 +16,23 @@
 		buttons.forEach((button) => {
 			button.classList.remove('current');
 		});
-
-		e.target.classList.add('current');
 	};
 </script>
 
 <div id="desktops" bind:this={desktop}>
-	<button class="current" on:click={changeDesktop}>1</button>
-	<button on:click={changeDesktop}>2</button>
-	<button on:click={changeDesktop}>3</button>
+	<a href="/" class="current" on:click={changeDesktop}>1</a>
+	<a href="/projects" on:click={changeDesktop}>2</a>
+	<a href="/resume" on:click={changeDesktop}>3</a>
 </div>
 
 <style>
 	#desktops {
 	}
-	button {
+	a {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
 		font-weight: 700;
 		height: 100%;
 		width: 2rem;
@@ -40,7 +42,7 @@
 		opacity: 0.5;
 		color: var(--gray0);
 	}
-	button.current {
+	a.current {
 		width: 4rem;
 		border-radius: 25px;
 		opacity: 1;

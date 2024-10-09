@@ -118,12 +118,16 @@
 		grid-template-columns: repeat(3, max-content);
 		justify-content: space-between;
 	}
+
 	:global(.navbar > *) {
 		padding-inline: 0.75rem;
 		padding-block: 0.35rem;
 		background-color: rgba(0, 0, 0, 0.699);
 		display: inline-block;
 		border-radius: 20px;
+	}
+	:global(.navbar > *:empty) {
+		opacity: 0;
 	}
 	:global(button) {
 		background: none;

@@ -1,5 +1,7 @@
 <script>
 	import profileImage from '$lib/images/profile.jpg';
+	import { onMount } from 'svelte';
+	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
 </script>
 
 <div id="terminal">
@@ -67,9 +69,6 @@
 		display: grid;
 		column-gap: 2rem;
 		row-gap: 1rem;
-		border-radius: 10px;
-		background-color: rgba(16, 16, 16, 0.699);
-		padding: 1rem;
 		grid-template-areas:
 			'command command'
 			'picture infoBlock';
