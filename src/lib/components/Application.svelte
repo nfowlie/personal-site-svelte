@@ -43,9 +43,6 @@
 		border-radius: 10px;
 		background-color: var(--application-background-color);
 	}
-	:global(.application > *) {
-		padding: 1rem;
-	}
 	.application:hover {
 		border: 4px solid rgb(65, 184, 164);
 		opacity: 1;

@@ -1,1 +1,1 @@
-export let applicationRune = $state({ title: 'Fowlie.dev', background: '#fff' });
+export let applicationRune = $state({ title: 'Fowlie.dev' });
