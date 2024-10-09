@@ -1,6 +1,5 @@
 <script>
 	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
-	import type { Snippet } from 'svelte';
 	import { onMount } from 'svelte';
 
 	/**
