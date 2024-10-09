@@ -1,7 +1,20 @@
 <script>
 	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
+	import type { Snippet } from 'svelte';
 	import { onMount } from 'svelte';
-	let { applicationName, applicationBackground } = $props();
+
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} applicationName
+	 * @property {string} applicationBackground
+	 * @property {Snippet} children
+	 */
+
+	/** @type {Props} */
+	const { applicationName, applicationBackground, children } = $props();
+	/**
+	 * @type {HTMLDivElement}
+	 */
 	let root;
 
 	onMount(() => {
@@ -19,7 +32,7 @@
 </script>
 
 <div class="application" bind:this={root}>
-	<slot />
+	{@render children()}
 </div>
 
 <style>
