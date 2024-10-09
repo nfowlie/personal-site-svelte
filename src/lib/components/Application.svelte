@@ -22,7 +22,7 @@
 
 		// Change current application name in status bar
 		root.addEventListener('mouseleave', (e) => {
-			applicationRune.title = '~>';
+			applicationRune.title = 'Fowlie.dev';
 		});
 		root.addEventListener('mouseenter', (e) => {
 			applicationRune.title = applicationName;
