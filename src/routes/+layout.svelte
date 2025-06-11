@@ -1,5 +1,5 @@
 <script>
-	import Start from '$lib/components/Start.svelte';
+	import ApplicationTitle from '$lib/components/ApplicationTitle.svelte';
 	import Desktops from '$lib/components/Desktops.svelte';
 	import Status from '$lib/components/Status.svelte';
 	import { themeRender } from '../stores/theme.svelte';
@@ -103,8 +103,8 @@
 </svelte:head>
 
 <nav class="navbar">
-	<Start></Start>
 	<Desktops></Desktops>
+	<ApplicationTitle></ApplicationTitle>
 	<Status></Status>
 </nav>
 <slot />
