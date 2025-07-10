@@ -1,6 +1,7 @@
 <script>
 	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
 	import { onMount } from 'svelte';
+	import Draggable from '../draggable.svelte';
 
 	/**
 	 * @typedef {Object} Props
@@ -30,9 +31,12 @@
 	});
 </script>
 
+<!-- <Draggable> -->
 <div class="application" bind:this={root}>
 	{@render children()}
 </div>
+
+<!-- </Draggable> -->
 
 <style>
 	.application {
@@ -40,7 +44,7 @@
 		border: 4px solid rgb(101, 156, 155);
 		transition: 400ms;
 		opacity: 0.85;
-		border-radius: 10px;
+		border-radius: var(--border-radius);
 		background-color: var(--application-background-color);
 	}
 	.application:hover {

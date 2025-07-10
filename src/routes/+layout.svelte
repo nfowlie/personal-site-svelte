@@ -110,6 +110,9 @@
 <slot />
 
 <style>
+	:root {
+		--border-radius: 10px;
+	}
 	.navbar {
 		position: relative;
 		display: grid;

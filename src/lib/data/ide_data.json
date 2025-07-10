@@ -1,0 +1,85 @@
+[
+	{
+		"folder": "",
+		"projects": [
+			{
+				"name": "Resume",
+				"type": "PDF",
+				"src": ""
+			},
+			{
+				"name": "README.md",
+				"type": "Markdown",
+				"src": ""
+			}
+		]
+	},
+	{
+		"folder": "Clients",
+		"projects": [
+			{
+				"name": "Digichief",
+				"siteLink": "https://www.digichief.com/",
+				"image": "/images/bunnywarning.png",
+				"type": "HTML",
+				"src": "https://www.digichief.com/"
+			},
+			{
+				"name": "CageKandy",
+				"siteLink": "https://cagekandy.com",
+				"image": "/images/bunnywarning.png",
+				"type": "Shopify",
+				"src": "https://cagekandy.com/"
+			},
+			{
+				"name": "BUNNYWARNING",
+				"siteLink": "https://bunnywarning.com",
+				"image": "/images/bunnywarning.png",
+				"type": "HTML",
+				"src": "https://bunnywarning.com"
+			}
+		]
+	},
+	{
+		"folder": "Projects",
+		"projects": [
+			{
+				"name": "FlipperZero Animation Tool",
+				"siteLink": "https://github.com/nfowlie/flipperzero-animation-tool",
+				"image": "/images/bunnywarning.png",
+				"type": "Tauri"
+			},
+			{
+				"name": "Monster Manual Entry",
+				"siteLink": "https://github.com/nfowlie/DnD-Monster-Manual",
+				"type": "Liquid",
+				"src": "https://raw.githubusercontent.com/nfowlie/DnD-Monster-Manual/refs/heads/master/README.md"
+			},
+			{
+				"name": "Webcomix Auto DL",
+				"siteLink": "https://github.com/nfowlie/webcomix-auto-dl",
+				"type": "Python"
+			},
+			{
+				"name": "Pikmin Party",
+				"siteLink": "https://github.com/nfowlie/pikmin-party",
+				"type": "Svelte"
+			},
+			{
+				"name": "TFNGG",
+				"siteLink": "https://github.com/nfowlie/TFNGG",
+				"type": "HTML"
+			},
+			{
+				"name": "Tiles",
+				"siteLink": "https://github.com/nfowlie/tiles",
+				"type": "HTML"
+			},
+			{
+				"name": "Tiles 3D",
+				"siteLink": "https://github.com/nfowlie/tiles3d",
+				"type": "HTML"
+			}
+		]
+	}
+]

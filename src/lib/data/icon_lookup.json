@@ -1,0 +1,10 @@
+{
+	"Markdown": "FileText",
+	"PDF": "ScrollText",
+	"Liquid": "Droplet",
+	"Tauri": "FileJson",
+	"HTML": "FileCode",
+	"Shopify": "ShoppingBag",
+	"Svelte": "FileCode",
+	"Python": "Worm"
+}

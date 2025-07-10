@@ -4,13 +4,25 @@
 	 * @typedef {Object} Props
 	 * @property {string} folderName
 	 * @property {boolean} folderOpen
-	 * @property {Snippet} children	 */
+	 * @property {Snippet} children
+	 * @property {number} tabIndex
+	 */
 
 	/** @type {Props} */
-	const { folderName, folderOpen, children } = $props();
+	let { folderName, folderOpen, children, tabIndex } = $props();
 </script>
 
-<section class="folder {folderOpen ? 'open' : ''}">
+<section
+	tabindex={tabIndex}
+	role="button"
+	class="folder {folderOpen ? 'open' : ''}"
+	onclick={(event) => {
+		if (event.target == event.currentTarget) folderOpen = !folderOpen;
+	}}
+	onkeypress={(event) => {
+		if (event.target == event.currentTarget) folderOpen = !folderOpen;
+	}}
+>
 	{#if folderOpen}
 		<LucideIcon name="FolderOpen" color="hsl(40, 62%, 73%)" />
 	{:else}
@@ -22,9 +34,14 @@
 
 <style>
 	.folder {
+		user-select: none;
 		margin-left: 1.75rem;
 		color: hsl(228, 13%, 44%);
 		padding-block-start: 0.4rem;
+	}
+
+	.folder:hover {
+		cursor: pointer;
 	}
 
 	:first-child {
@@ -33,5 +50,8 @@
 
 	.folder.open {
 		color: hsl(40, 62%, 73%);
+	}
+	:global(.folder:not(.open) > .file) {
+		display: none;
 	}
 </style>
