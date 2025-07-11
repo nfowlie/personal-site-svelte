@@ -1,2 +1,2 @@
-assets.directory = ".cloudflare/public"
+assets.directory = ".svelte-kit/cloudflare"
 assets.binding = "ASSETS"
