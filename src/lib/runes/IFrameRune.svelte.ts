@@ -1,1 +1,1 @@
-export let iframeRune = $state({ title: "Resume.pdf", src: "http://localhost:5173/public/Noel Fowlie - Resume.pdf" });
+export let iframeRune = $state({ title: "Resume", src: "https://fowlie.dev/public/Noel Fowlie - Resume.pdf" });
