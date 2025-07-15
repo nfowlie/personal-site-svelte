@@ -20,5 +20,12 @@
 <style>
 	main {
 		margin-inline: 1rem;
+		height: 50vh;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.5rem;
+	}
+	:global(main > *) {
+		height: 85vh;
 	}
 </style>

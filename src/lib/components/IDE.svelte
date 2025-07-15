@@ -12,7 +12,12 @@
 		{#each ide_data as folders, index}
 			{#if folders.folder == ''}
 				{#each folders.projects as project, subIndex}
-					<IdeFile icon={project.type} tabIndex={subIndex} fileName={project.name} fileOpen={false}
+					<IdeFile
+						icon={project.type}
+						tabIndex={subIndex}
+						fileName={project.name}
+						fileOpen={false}
+						src={project.src}
 					></IdeFile>
 				{/each}
 			{:else}
@@ -43,7 +48,9 @@
 		grid-template-areas:
 			'titleBar titleBar'
 			'sideBar previewArea';
+		grid-template-rows: auto 1fr;
 		--border-style: 1px solid hsl(228, 22%, 66%);
+		height: 100%;
 	}
 
 	.titleBar {
@@ -58,6 +65,7 @@
 		padding: 12px;
 	}
 	.sideBar {
+		resize: horizontal;
 		border-bottom-left-radius: var(--border-radius);
 		border-left: none;
 		border-bottom: none;
