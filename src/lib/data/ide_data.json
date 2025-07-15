@@ -5,12 +5,12 @@
 			{
 				"name": "Resume",
 				"type": "PDF",
-				"src": "http://localhost:5173/public/Noel Fowlie - Resume.pdf"
+				"src": "https://fowlie.dev/public/Noel Fowlie - Resume.pdf"
 			},
 			{
 				"name": "README.md",
 				"type": "Markdown",
-				"src": "http://localhost:5173/public/README.md"
+				"src": "https://fowlie.dev/public/README.md"
 			}
 		]
 	},
