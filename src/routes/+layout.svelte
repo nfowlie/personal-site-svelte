@@ -3,6 +3,7 @@
 	import Desktops from '$lib/components/Desktops.svelte';
 	import Status from '$lib/components/Status.svelte';
 	import { themeRender } from '../stores/theme.svelte';
+	import './styles.css';
 
 	const theme = themeRender();
 </script>
@@ -110,24 +111,27 @@
 <slot />
 
 <style>
-	:root {
-		--border-radius: 10px;
-	}
 	.navbar {
-		position: relative;
 		display: grid;
-		margin-block: 0.5rem;
-		margin-inline: 1rem;
+		margin-block: var(--title_bar_gaps_block);
+		margin-inline: var(--title_bar_gaps_out);
 		grid-template-columns: repeat(3, max-content);
 		justify-content: space-between;
 	}
 
 	:global(.navbar > *) {
-		padding-inline: 0.75rem;
-		padding-block: 0.35rem;
-		background-color: rgba(0, 0, 0, 0.699);
+		padding-inline: var(--title_bar_item_gap_out);
+		padding-block: var(--title_bar_item_gap_block);
+		background-color: var(--title_bar_background_color);
+		border-radius: var(--title_bar_border_radius);
 		display: inline-block;
-		border-radius: 20px;
+	}
+	:global(.navbar .title, .navbar a, .navbar button) {
+		color: var(--title_bar_text_color);
+		margin-inline: var(--title_bar_item_gap_in);
+	}
+	:global(.navbar a, .navbar button) {
+		cursor: var(--title_bar_action_cursor);
 	}
 	:global(.navbar > *:empty) {
 		opacity: 0;

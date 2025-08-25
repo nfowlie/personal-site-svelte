@@ -65,6 +65,7 @@
 		--terminal-command: #57c2d8;
 		--terminal-username: #abd376;
 		--terminal-system: #cbccc6;
+		--terminal-detail: #cbccc6;
 		display: grid;
 		column-gap: 2rem;
 		row-gap: 1rem;

@@ -23,7 +23,7 @@
 
 		// Change current application name in status bar
 		root.addEventListener('mouseleave', (e) => {
-			applicationRune.title = 'Fowlie.dev';
+			applicationRune.title = 'fowlie.dev';
 		});
 		root.addEventListener('mouseenter', (e) => {
 			applicationRune.title = applicationName;
@@ -41,14 +41,15 @@
 <style>
 	.application {
 		--application-background-color: #fff;
-		border: 4px solid rgb(101, 156, 155);
-		transition: 400ms;
-		opacity: 0.85;
-		border-radius: var(--border-radius);
+		border: var(--border_size) var(--border_style) var(--border_color_inactive);
+		transition: var(--window_dim_animation_speed);
+		opacity: var(--window_dim_strength);
+		border-radius: var(--border_radius);
 		background-color: var(--application-background-color);
 	}
-	.application:hover {
-		border: 4px solid rgb(65, 184, 164);
+	.application:hover,
+	.application:active {
+		border: var(--border_size) var(--border_style) var(--border_color_active);
 		opacity: 1;
 	}
 </style>

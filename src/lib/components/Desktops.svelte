@@ -36,15 +36,13 @@
 		font-weight: 700;
 		height: 100%;
 		width: 2rem;
-		border-radius: 50%;
-		transition: 250ms;
+		border-radius: var(--title_bar_border_radius);
+		transition: var(--title_bar_animation_speed);
 		background-color: hsla(0, 0%, 62%, 0.58);
 		opacity: 0.5;
-		color: var(--gray0);
 	}
 	a.current {
 		width: 4rem;
-		border-radius: 25px;
 		opacity: 1;
 	}
 </style>

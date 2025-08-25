@@ -49,29 +49,32 @@
 			'titleBar titleBar'
 			'sideBar previewArea';
 		grid-template-rows: auto 1fr;
-		--border-style: 1px solid hsl(228, 22%, 66%);
 		height: 100%;
+		--ide_border_radius: 10px;
+		--ide_border_size: 1px;
+		--ide_border_style: solid;
+		--ide_border_color: hsl(228, 22%, 66%);
 	}
 
 	.titleBar {
-		border-top-left-radius: var(--border-radius);
-		border-top-right-radius: var(--border-radius);
+		border-top-left-radius: var(--ide_border_radius);
+		border-top-right-radius: var(--ide_border_radius);
 		grid-area: titleBar;
 		background-color: hsl(229, 20%, 17%);
 		color: hsl(227, 70%, 87%);
-		border-bottom: var(--border-style);
+		border-bottom: var(--ide_border_size) var(--ide_border_style) var(--ide_border_color);
 		font-weight: 700;
 		font-size: 1.2rem;
 		padding: 12px;
 	}
 	.sideBar {
 		resize: horizontal;
-		border-bottom-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--ide_border_radius);
 		border-left: none;
 		border-bottom: none;
 		grid-area: sideBar;
 		background-color: hsl(229, 19%, 23%);
-		border-right: var(--border-style);
+		border-right: var(--ide_border_size) var(--ide_border_style) var(--ide_border_color);
 		padding: 0.5rem;
 	}
 	:global(.sideBar > section) {
@@ -79,12 +82,12 @@
 	}
 	.previewArea {
 		border-right: 4px solid rgb(101, 156, 155);
-		border-bottom-right-radius: var(--border-radius);
+		border-bottom-right-radius: var(--ide_border_radius);
 		grid-area: previewArea;
 		background-color: hsl(227, 15%, 37%);
 		padding: 0 4px 4px 0;
 	}
 	iframe {
-		border-bottom-right-radius: var(--border-radius);
+		border-bottom-right-radius: var(--ide_border_radius);
 	}
 </style>

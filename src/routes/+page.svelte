@@ -7,7 +7,7 @@
 <main>
 	<Application
 		applicationName="Terminal ~> profilefetch"
-		applicationBackground="rgba(16, 16, 16, 0.699)"
+		applicationBackground="rgba(16, 16, 16, .8)"
 	>
 		<Terminal></Terminal>
 	</Application>
@@ -19,13 +19,11 @@
 
 <style>
 	main {
-		margin-inline: 1rem;
-		height: 50vh;
+		margin-block: var(--window_gaps_block);
+		margin-inline: var(--window_gaps_out);
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 0.5rem;
-	}
-	:global(main > *) {
-		height: 85vh;
+		gap: var(--window_gaps_in);
+		justify-content: space-around;
 	}
 </style>

@@ -4,9 +4,3 @@
 </script>
 
 <svelte:component this={icons[name]} {...$$props} class="icon" />
-
-<style>
-	:global(.icon) {
-		color: var(--gray1);
-	}
-</style>

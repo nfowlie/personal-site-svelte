@@ -11,7 +11,6 @@
 
 <style>
 	#start {
-		color: white;
 		font-weight: 700;
 		line-height: 1em;
 		display: flex;

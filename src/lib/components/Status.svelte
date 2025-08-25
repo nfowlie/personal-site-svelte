@@ -38,8 +38,3 @@
 		<LucideIcon name="Linkedin" />
 	</button>
 </div>
-
-<style>
-	#status {
-	}
-</style>
