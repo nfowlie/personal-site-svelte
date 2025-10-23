@@ -1,1 +1,1 @@
-export let applicationRune = $state({ title: 'Fowlie.dev' });
+export const applicationRune = $state({ title: 'Fowlie.dev' });

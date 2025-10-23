@@ -1,18 +1,12 @@
-<script>
-	import LucideIcon from '$lib/components/LucideIcon.svelte';
+<script lang="ts">
 	import { onMount } from 'svelte';
-	/**
-	 * @type {HTMLDivElement}
-	 */
-	let desktop,
-		/**
-		 * @type {any[] | NodeListOf<HTMLButtonElement>}
-		 */
-		buttons;
+
+	let desktop: HTMLDivElement, buttons: NodeListOf<HTMLButtonElement>;
+
 	onMount(() => {
 		buttons = desktop?.querySelectorAll('button');
 	});
-	const changeDesktop = (e) => {
+	const changeDesktop = () => {
 		buttons.forEach((button) => {
 			button.classList.remove('current');
 		});
@@ -26,8 +20,6 @@
 </div>
 
 <style>
-	#desktops {
-	}
 	a {
 		display: inline-flex;
 		justify-content: center;

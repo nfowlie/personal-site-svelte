@@ -1,10 +1,13 @@
-<script>
-	import { onMount } from 'svelte';
+<script lang="ts">
+	// Types
+	import type { ICommandList, ICommandRune } from '$lib/interfaces/ITerminal.svelte';
+	// Runes
 	import { commandContent } from '$lib/runes/CommandRune.svelte';
-	const commandList = {
+
+	const commandList: ICommandList = {
 		// Terminal Commands
-		profilefetch: `lkjfdlksj`,
-		'-p': `sjdflkj`,
+		profilefetch: ``,
+		'-p': ``,
 		// Help Commands
 		help: `-h, help\n	Print help\n-p, profilefetch\n	Displays profile information\nc, clear\n	Clears the terminal history`,
 		'-h': `-h, help\n	Print help\n-p, profilefetch\n	Displays profile information\nc, clear\n	Clears the terminal history`,
@@ -27,21 +30,23 @@
 		}
 	});
 
-	function enterCommand(event) {
-		if (event?.key === 'Enter') {
-			const command = {
-				command: event.target.value,
-				output: `command not found: ${event.target.value}`
+	function enterCommand(event: KeyboardEvent) {
+		const inputEl = document.querySelector<HTMLInputElement>('input');
+
+		if (inputEl && event?.key === 'Enter') {
+			const command: ICommandRune = {
+				command: inputEl.value,
+				output: `command not found: ${inputEl.value}`
 			};
-			if (commandList[event.target.value]) {
-				command.output = commandList[event.target.value];
+			if (commandList[inputEl.value]) {
+				command.output = commandList[inputEl.value];
 			}
 			commandContent.publish(command);
-			if (event.target.value === 'c' || event.target.value === 'clear') {
+			if (inputEl.value === 'c' || inputEl.value === 'clear') {
 				commandContent.clear();
 			}
 
-			event.target.value = '';
+			inputEl.value = '';
 		}
 	}
 </script>

@@ -1,14 +1,6 @@
-<script>
+<script lang="ts">
 	import LucideIcon from '$lib/components/LucideIcon.svelte';
-	/**
-	 * @typedef {Object} Props
-	 * @property {string} folderName
-	 * @property {boolean} folderOpen
-	 * @property {Snippet} children
-	 * @property {number} tabIndex
-	 */
 
-	/** @type {Props} */
 	let { folderName, folderOpen, children, tabIndex } = $props();
 </script>
 
@@ -16,10 +8,10 @@
 	tabindex={tabIndex}
 	role="button"
 	class="folder {folderOpen ? 'open' : ''}"
-	onclick={(event) => {
+	onclick={(event: MouseEvent) => {
 		if (event.target == event.currentTarget) folderOpen = !folderOpen;
 	}}
-	onkeypress={(event) => {
+	onkeypress={(event: KeyboardEvent) => {
 		if (event.target == event.currentTarget) folderOpen = !folderOpen;
 	}}
 >

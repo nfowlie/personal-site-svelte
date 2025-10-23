@@ -1,6 +1,8 @@
+import type { ICommandRune } from "$lib/interfaces/ITerminal.svelte"
+
 class Publisher {
-	events = $state([])
-	publish = (event) => {
+	events: ICommandRune[] = $state([])
+	publish = (event: ICommandRune) => {
 		this.events = [...this.events, event]
 	}
 	clear = () => {

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import LucideIcon from '$lib/components/LucideIcon.svelte';
 	let { fileName, fileOpen, tabIndex, icon, src } = $props();
 	import iconLookup from '$lib/data/icon_lookup.json';
@@ -9,12 +9,12 @@
 	tabindex={tabIndex}
 	role="button"
 	class="file {fileOpen ? 'open' : ''}"
-	onclick={(event) => {
+	onclick={(event: MouseEvent) => {
 		if (event.target == event.currentTarget) fileOpen = !fileOpen;
 		iframeRune.title = fileName;
 		iframeRune.src = src;
 	}}
-	onkeypress={(event) => {
+	onkeypress={(event: KeyboardEvent) => {
 		if (event.target == event.currentTarget) fileOpen = !fileOpen;
 		iframeRune.title = fileName;
 		iframeRune.src = src;

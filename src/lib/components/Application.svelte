@@ -1,31 +1,22 @@
-<script>
-	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
+<script lang="ts">
 	import { onMount } from 'svelte';
-	import Draggable from '../draggable.svelte';
+	// Runes
+	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
 
-	/**
-	 * @typedef {Object} Props
-	 * @property {string} applicationName
-	 * @property {string} applicationBackground
-	 * @property {Snippet} children
-	 */
+	// import Draggable from '../draggable.svelte';
 
-	/** @type {Props} */
 	const { applicationName, applicationBackground, children } = $props();
-	/**
-	 * @type {HTMLDivElement}
-	 */
-	let root;
+	let root: HTMLDivElement;
 
 	onMount(() => {
 		// Set Application Background Color
 		root.style.setProperty('--application-background-color', applicationBackground);
 
 		// Change current application name in status bar
-		root.addEventListener('mouseleave', (e) => {
+		root.addEventListener('mouseleave', () => {
 			applicationRune.title = 'fowlie.dev';
 		});
-		root.addEventListener('mouseenter', (e) => {
+		root.addEventListener('mouseenter', () => {
 			applicationRune.title = applicationName;
 		});
 	});

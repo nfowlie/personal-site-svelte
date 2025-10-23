@@ -1,5 +1,6 @@
 <script>
 	import LucideIcon from '$lib/components/LucideIcon.svelte';
+	// Runes
 	import { applicationRune } from '$lib/runes/ApplicationRune.svelte';
 </script>
 

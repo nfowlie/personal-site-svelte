@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
 	import IdeFolder from './IdeFolder.svelte';
 	import IdeFile from './IdeFile.svelte';
 	import ide_data from '../data/ide_data.json';
+
+	// Runes
 	import { iframeRune } from '$lib/runes/IFrameRune.svelte';
 	let activeSite;
 </script>

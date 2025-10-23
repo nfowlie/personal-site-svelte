@@ -1,18 +1,21 @@
-<script>
+<script lang="ts">
+	// Types
+	import type { ICommandRune } from '$lib/interfaces/ITerminal.svelte';
+	// Runes
+	import { commandContent } from '$lib/runes/CommandRune.svelte';
+
 	import profileImage from '$lib/images/profile.jpg';
 	import profileData from '$lib/data/profile_fetch_data.json';
-	import { commandContent } from '$lib/runes/CommandRune.svelte';
-	console.log(commandContent.events.length);
 </script>
 
 <div id="output">
 	<!-- Snippets -->
-	{#snippet command(event)}
+	{#snippet command(event: ICommandRune)}
 		<div class="command">
 			<span class="system">></span>
 			<span class="command">{event.command}</span>
 			<div class="output">
-				{#if event === 'profilefetch' || event.command === 'profilefetch' || event.command === '-p'}
+				{#if event.command === 'profilefetch' || event.command === '-p'}
 					{@render profileFetch()}
 				{:else}
 					{event.output}
@@ -131,14 +134,5 @@
 	}
 	a {
 		color: inherit;
-	}
-
-	.cursor {
-		display: inline-block;
-		height: 1em;
-		width: 1em;
-		background-color: blue;
-		align-self: flex-end;
-		justify-content: flex-end;
 	}
 </style>
