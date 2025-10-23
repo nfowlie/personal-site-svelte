@@ -31,7 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@cloudflare/workerd-linux-64": "^1.20250428.0",
+		"@cloudflare/workerd-linux-64": "^1.20251023.0",
 		"@sveltejs/adapter-cloudflare": "^7.2.4",
 		"lucide-svelte": "^0.546.0"
 	}
