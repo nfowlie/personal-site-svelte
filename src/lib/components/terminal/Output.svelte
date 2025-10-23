@@ -10,7 +10,7 @@
 	{#snippet command(event)}
 		<div class="command">
 			<span class="system">></span>
-			<span class="command">profilefetch</span>
+			<span class="command">{event.command}</span>
 			<div class="output">
 				{#if event === 'profilefetch' || event.command === 'profilefetch' || event.command === '-p'}
 					{@render profileFetch()}
@@ -74,7 +74,7 @@
 	{/snippet}
 
 	<!-- Rendered DOM -->
-	{@render command('profilefetch')}
+	{@render command({ command: 'profilefetch' })}
 	{#each commandContent.events as event}
 		{@render command(event)}
 	{/each}
