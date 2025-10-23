@@ -2,9 +2,24 @@
 	import profileImage from '$lib/images/profile.jpg';
 	import profileData from '$lib/data/profile_fetch_data.json';
 	import { commandContent } from '$lib/runes/CommandRune.svelte';
+	console.log(commandContent.events.length);
 </script>
 
 <div id="output">
+	<!-- Snippets -->
+	{#snippet command(event)}
+		<div class="command">
+			<span class="system">></span>
+			<span class="command">profilefetch</span>
+			<div class="output">
+				{#if event === 'profilefetch' || event.command === 'profilefetch' || event.command === '-p'}
+					{@render profileFetch()}
+				{:else}
+					{event.output}
+				{/if}
+			</div>
+		</div>
+	{/snippet}
 	{#snippet profileFetch()}
 		<div class="profileFetch">
 			<img src={profileImage} alt="Noel Echo Fowlie wearing glasses." />
@@ -57,18 +72,11 @@
 			</div>
 		</div>
 	{/snippet}
+
+	<!-- Rendered DOM -->
+	{@render command('profilefetch')}
 	{#each commandContent.events as event}
-		<div class="command">
-			<span class="system">></span>
-			<span class="command">{event.command}</span>
-			<div class="output">
-				{#if event.command === 'profilefetch' || event.command === '-p'}
-					{@render profileFetch()}
-				{:else}
-					{event.output}
-				{/if}
-			</div>
-		</div>
+		{@render command(event)}
 	{/each}
 </div>
 
