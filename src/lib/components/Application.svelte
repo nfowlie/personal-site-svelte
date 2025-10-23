@@ -40,7 +40,7 @@
 
 <style>
 	.application {
-		--application-background-color: #fff;
+		/*--application-background-color: #fff;*/
 		border: var(--border_size) var(--border_style) var(--border_color_inactive);
 		transition: var(--window_dim_animation_speed);
 		opacity: var(--window_dim_strength);

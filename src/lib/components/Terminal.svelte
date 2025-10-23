@@ -1,63 +1,25 @@
 <script>
-	import profileImage from '$lib/images/profile.jpg';
-	import profileData from '$lib/data/profile_fetch_data.json';
+	import Command from '$lib/components/terminal/Command.svelte';
+	import Output from '$lib/components/terminal/Output.svelte';
+	import { commandContent } from '$lib/runes/CommandRune.svelte';
+
+	let isFocused = $state(true);
+	let terminalEl;
+
+	$effect(() => {
+		commandContent.events;
+		terminalEl?.scrollTo(0, terminalEl.scrollHeight, 'smooth');
+	});
 </script>
 
-<div id="terminal">
-	<div class="commandContainer">
-		<span class="username">noel</span><span class="system">@fowlie</span>
-		<span class="commandTilde">~</span><span class="system">&gt;</span>
-		<span class="command">profilefetch</span>
-	</div>
-	<!-- svelte-ignore a11y_img_redundant_alt -->
-	<img src={profileImage} alt="Picture of Noel" />
-	<div id="infoBlock">
-		<h1 id="infoTitle">Noel Echo Fowlie</h1>
-		<div class="info">
-			<div class="info-title">Employer</div>
-			<div class="info-detail">{profileData.Employer}</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Title</div>
-			<div class="info-detail">{profileData.Title}</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Location</div>
-			<div class="info-detail">{profileData.Location}</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Github</div>
-			<div class="info-detail">
-				<a href="https://github.com/nfowlie">{profileData.Github}</a>
-			</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Email</div>
-			<div class="info-detail">
-				<a href="mailto:noel@fowlie.dev">{profileData.Email}</a>
-			</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Phone</div>
-			<div class="info-detail">
-				<a href="tel:+17046999544">{profileData.Phone}</a>
-			</div>
-		</div>
-		<div class="info">
-			<div class="info-title">LinkedIn</div>
-			<div class="info-detail">
-				<a href="https://www.linkedin.com/in/noel-echo-fowlie/">{profileData.LinkedIn}</a>
-			</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Experience</div>
-			<div class="info-detail">{profileData.Experience}</div>
-		</div>
-		<div class="info">
-			<div class="info-title">Site Framework</div>
-			<div class="info-detail">{profileData.SiteFramework}</div>
-		</div>
-	</div>
+<div
+	id="terminal"
+	bind:this={terminalEl}
+	onpointerenter={() => (isFocused = true)}
+	onpointerleave={() => (isFocused = false)}
+>
+	<Output></Output>
+	<Command {isFocused}></Command>
 </div>
 
 <style>
@@ -66,16 +28,16 @@
 		--terminal-username: #abd376;
 		--terminal-system: #cbccc6;
 		--terminal-detail: #cbccc6;
-		display: grid;
+		display: flex;
+		flex-wrap: wrap;
 		column-gap: 2rem;
 		row-gap: 1rem;
-		grid-template-areas:
-			'command command'
-			'picture infoBlock';
+
 		padding: 1rem;
 		align-content: start;
 		justify-content: start;
-		height: 100%;
+		overflow-y: scroll;
+		height: calc(100vh - 16vh);
 	}
 	.commandContainer {
 		grid-area: command;
@@ -122,5 +84,14 @@
 	}
 	a {
 		color: inherit;
+	}
+
+	.cursor {
+		display: inline-block;
+		height: 1em;
+		width: 1em;
+		background-color: blue;
+		align-self: flex-end;
+		justify-content: flex-end;
 	}
 </style>
